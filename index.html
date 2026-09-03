@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.svg">
+      <link href="/pwa-192x192.png" rel="apple-touch-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta content="morningwn - 菜狗的日志" name="description">
+      <meta content="#0a0d14" name="theme-color">
+    <title>morningwn</title>
+    <script type="module" crossorigin src="/assets/index-BMJCGy8J.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/beautiful-mermaid-B557tgFC.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-DTcRiuVQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/markdown-mcDsJoOB.js">
+    <link rel="modulepreload" crossorigin href="/assets/katex-DDZQbmMp.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-n8lg6tjM.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+  <script>
+      (function () {
+          var themes = {
+              'deep-ocean': '#0F111A', 'oceanic': '#263238', 'palenight': '#292D3E', 'darker': '#212121',
+              'lighter': '#FAFAFA', 'sky-blue': '#F5F5F5', 'sandy': '#FFF8ED', 'solarized': '#fdf6e3'
+          };
+          var t = localStorage.getItem('site-theme');
+          var resolved;
+          if (t && themes[t]) {
+              resolved = t;
+          } else {
+              resolved = window.matchMedia('(prefers-color-scheme:light)').matches ? 'lighter' : 'deep-ocean';
+          }
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', themes[resolved]);
+      })()
+  </script>
+    <div id="app"></div>
+  </body>
+</html>
